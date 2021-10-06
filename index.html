@@ -9,6 +9,13 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+	<!-- scroll animation -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	<!-- Smooth scroll -->
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
 </head>
 <body>
 	
@@ -26,11 +33,11 @@
 						<i class="fa fa-times"></i>
 					</div>
 
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Key Features</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Testimonial</a></li>
-					<li><a href="#">FAQ</a></li>
+					<li><a href="#header">Home</a></li>
+					<li><a href="#awsome-app">Key Features</a></li>
+					<li><a href="#awsome">Pricing</a></li>
+					<li><a href="#client">Testimonial</a></li>
+					<li><a href="#question">FAQ</a></li>
 				</ul>
 
 				<div class="icon menu-btn">
@@ -72,7 +79,7 @@
 
 
 	<!-- trusted company -->
-	<section id="trusted">
+	<section id="trusted" data-aos="zoom-in">
 		<div class="treusted-content">
 			<p>Trusted By Company Like</p>
 			<div class="all-image">
@@ -87,7 +94,7 @@
 	<!-- trusted company -->
 
 	<!-- Awsome App -->
-	<section id="awsome-app">
+	<section id="awsome-app" data-aos="flip-up">
 		<div class="awsome-left">
 			<img src="images/section3/phone-2.png" alt="">
 		</div>
@@ -128,7 +135,7 @@
 	<!-- Awsome App -->
 
 	<!-- smart section -->
-	<section id="smart">
+	<section id="smart" data-aos="slide-left">
 		<div class="smart-content">
 			<div class="smart-text">
 				<h1>Smart jackpots that <br>you my love this <br>anytime & anywhere</h1>
@@ -183,7 +190,7 @@
 
 
 	<!-- why you should choose -->
-	<section id="why">
+	<section id="why" data-aos="flip-down">
 		<div class="why-content">
 			<h1>Why you should choose <br>our app</h1>
 			<p class="why-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae at ea mollitia nemo ducimus debitis magni, ad eaque quod voluptatem asperiores, commodi qui magnam vero!</p>
@@ -233,7 +240,7 @@
 	<!-- why you should choose -->
 
 	<!-- Ultimate Features -->
-	<section id="ultimate">
+	<section id="ultimate" data-aos="flip-right">
 		<div class="ultimate-left">
 			<div class="all-services">
 				<h1>Ultimate features <br>that we buld</h1>
@@ -281,7 +288,7 @@
 
 
 	<!-- awsome features -->
-	<section id="awsome">
+	<section id="awsome" data-aos="fade-down-right">
 
 		<div class="aw-head-content">
 			<h1>Get awsome fetures without <br>extra charge</h1>
@@ -343,7 +350,7 @@
 	<!-- awsome features -->
 
 	<!-- meet client -->
-	<section id="client">
+	<section id="client" data-aos="slide-down">
 		
 		<div class="client-left">
 			<img src="images/section8/people.png" alt="">
@@ -377,7 +384,7 @@
 	<!-- meet client -->
 
 	<!-- ask Question -->
-	<section id="question">
+	<section id="question" data-aos="flip-up">
 		<div>
 			<div class="question-header">
 				<h1>Frequesntly ask qestions</h1>
@@ -461,8 +468,29 @@
 	<!-- dwonload app and footer -->
 
 
+	<!-- scrtoll to top -->
+	<a href="#" class="to-top">
+		<i class="fa fa-angle-up"></i>
+	</a>
+
+	<script>
+		var toTop = document.querySelector(".to-top");
+		window.addEventListener("scroll", () =>{
+			if (window.pageYOffset > 100) {
+				toTop.classList.add("active");
+			}else{
+				toTop.classList.remove("active");
+			}
+		})
+	</script>
+	<!-- scrtoll to top -->
 
 
+
+
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 	<script>
 		
@@ -493,6 +521,20 @@
 			})
 		}
 
+
+		// smooth scoll
+
+		var scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 800,
+			speedAsDuration: true
+		});
+
+		// scroll animation
+		AOS.init({
+			offset: 120,
+			delay: 0,
+			duration: 1000,
+		});
 
 	</script>
 </body>
